@@ -3,7 +3,7 @@ import {FC, memo, UIEventHandler, useCallback, useEffect, useMemo, useRef, useSt
 
 import {isApple, isMobile} from '../../config';
 import {SectionId, testimonial} from '../../data/data';
-import {Testimonial} from '../../data/dataDef';
+// import {Testimonial} from '../../data/dataDef';
 import useInterval from '../../hooks/useInterval';
 import useWindow from '../../hooks/useWindow';
 import QuoteIcon from '../Icon/QuoteIcon';
@@ -70,7 +70,7 @@ const Testimonials: FC = memo(() => {
   }
 
   return (
-    <Section noPadding sectionId={SectionId.Testimonials}>
+    // <Section noPadding sectionId={SectionId.Testimonials}>
       <div
         className={classNames(
           'flex w-full items-center justify-center bg-cover bg-center px-4 py-16 md:py-24 lg:px-8',
@@ -84,12 +84,12 @@ const Testimonials: FC = memo(() => {
               className="no-scrollbar flex w-full touch-pan-x snap-x snap-mandatory gap-x-6 overflow-x-auto scroll-smooth"
               onScroll={handleScroll}
               ref={scrollContainer}>
-              {testimonials.map((testimonial, index) => {
+              {/* {testimonials.map((testimonial, index) => {
                 const isActive = index === activeIndex;
                 return (
                   <Testimonial isActive={isActive} key={`${testimonial.name}-${index}`} testimonial={testimonial} />
                 );
-              })}
+              })} */}
             </div>
             <div className="flex gap-x-4">
               {[...Array(testimonials.length)].map((_, index) => {
@@ -129,7 +129,7 @@ const Testimonial: FC<{testimonial: Testimonial; isActive: boolean}> = memo(
         <QuoteIcon className="h-5 w-5 shrink-0 text-white sm:h-8 sm:w-8" />
       )}
       <div className="flex flex-col gap-y-4">
-        <p className="prose prose-sm font-medium italic text-white sm:prose-base">{text}</p>
+        <p className="prose-sm prose font-medium italic text-white sm:prose-base">{text}</p>
         <p className="text-xs italic text-white sm:text-sm md:text-base lg:text-lg">-- {name}</p>
       </div>
     </div>
