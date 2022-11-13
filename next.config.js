@@ -17,11 +17,11 @@ const nextConfig = {
   pageExtensions: ['tsx', 'mdx', 'ts'],
   poweredByHeader: false,
   productionBrowserSourceMaps: false,
-  svgo: {
-    multipass: true,
-    plugins: ['removeDimensions'],
-  },
-  strictMode: true,
+  // svgo: {
+  //   multipass: true,
+  //   plugins: ['removeDimensions'],
+  // },
+  // strictMode: false,
   swcMinify: true,
   trailingSlash: false,
   images: {
