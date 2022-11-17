@@ -284,7 +284,7 @@ export const experience: TimelineItem[] = [
   {
     date: 'May 2018 - August 2020',
     location: 'Amazon Inc',
-    title: 'Software Developer',
+    title: 'Data Analyst',
     content: (
       <p>
         Training Artificial Intelligence to get accurate results in deciding the stowing using machine learning
